@@ -52,6 +52,8 @@ const TestStoreTabs = () => {
             id: item.id,
             name: item.title,
             price: item.price,
+            description: item.description,
+            testsIncluded: item.testsIncluded,
             type: "package",
           })
         ),
@@ -66,6 +68,7 @@ const TestStoreTabs = () => {
             id: item.id,
             name: item.title,
             price: item.price,
+            description: item.description,
             type: "single",
           })
         ),
@@ -102,7 +105,7 @@ const TestStoreTabs = () => {
         <ul className="space-y-6">
           {current.data.map((item) => (
             <TestCard
-              key={item.id}
+              key={item.type}
               item={item}
               onAddToCart={() => current.onAdd(item)}
             />
