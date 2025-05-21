@@ -50,7 +50,7 @@ const Cart = () => {
         </div>
 
         {/* Order Summary */}
-        <div className="w-full sm:w-1/4 px-8 py-10 bg-gray-50">
+        <div className="w-full h-full sm:w-1/4 px-8 py-10 bg-gray-50">
           <h1 className="font-semibold text-2xl border-b pb-8">
             Order Summary
           </h1>
