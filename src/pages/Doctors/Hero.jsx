@@ -15,7 +15,7 @@ const Hero = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#consultType"
                 className="rounded-md bg-green-600/90 px-3.5 py-2.5 text-sm font-medium text-white transition duration-300 hover:bg-green-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
               >
                 Book a Consultation

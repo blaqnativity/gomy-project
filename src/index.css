@@ -4,6 +4,8 @@
 body {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+  transition: all 400ms ease-in-out;
 }
 
 button:hover {
