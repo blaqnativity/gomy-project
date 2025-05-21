@@ -48,7 +48,12 @@ const TestStoreTabs = () => {
       error: error.packages,
       onAdd: (item) =>
         dispatch(
-          addToCart({ id: item.id, name: item.title, price: item.price })
+          addToCart({
+            id: item.id,
+            name: item.title,
+            price: item.price,
+            type: "package",
+          })
         ),
     },
     singleTests: {
@@ -61,6 +66,7 @@ const TestStoreTabs = () => {
             id: item.id,
             name: item.title,
             price: item.price,
+            type: "single",
           })
         ),
     },
