@@ -3,7 +3,7 @@ import TestStoreTabs from "./TestStoreTabs";
 const AllTestsPage = () => {
   return (
     <>
-      <div className="text-center my-20 text-gray-700 flex flex-col gap-6 max-w-3xl mx-auto">
+      <div className="text-center my-20 pt-20 text-gray-700 flex flex-col gap-6 max-w-3xl mx-auto">
         <h1 className="text-3xl md:text-5xl font-bold">
           Explore available health packages
         </h1>

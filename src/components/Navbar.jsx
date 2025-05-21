@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="fixed top-0 right-0 py-1 lg:py-2 w-full bg-transparent lg:relative z-50 dark:bg-gray-900">
+      <div className="fixed top-0 right-0 py-1 lg:py-2 w-full bg-transparent z-50 dark:bg-gray-900">
         <nav className="max-w-7xl mx-auto px-5 py-2.5 lg:border-none lg:py-4">
           <div className="flex items-center justify-between">
             <button>

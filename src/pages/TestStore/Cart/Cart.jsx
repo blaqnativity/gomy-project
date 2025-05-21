@@ -17,7 +17,7 @@ const Cart = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto mt-10">
+    <div className="max-w-7xl mx-auto mt-10 pt-20">
       <div className="sm:flex my-10">
         {/* Cart Items Section */}
         <div className="w-full sm:w-3/4 bg-white px-10 py-10">

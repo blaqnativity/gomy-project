@@ -3,7 +3,7 @@ import { consultOne } from "../../data/data";
 const Hero = () => {
   return (
     <>
-      <div className="py-12 sm:py-24">
+      <div className="sm:py-24 pt-20">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mb-8 flex justify-center"></div>
           <div className="mx-auto max-w-4xl text-center">
