@@ -4,6 +4,7 @@ import axios from "axios";
 import TestCard from "./TestCard";
 import Loader from "./Loader";
 import Error from "./Error";
+import { addToCart } from "../../store/cartSlice";
 
 const TestStoreTabs = () => {
   const dispatch = useDispatch();
