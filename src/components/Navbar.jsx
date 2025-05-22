@@ -52,7 +52,7 @@ const Navbar = () => {
                 {storedData && storedData.email ? (
                   <>
                     <span className="text-black dark:text-white font-semibold">
-                      Hello, {storedData.username}
+                      Welcome, {storedData.username}
                     </span>
                     <button
                       onClick={handleLogout}

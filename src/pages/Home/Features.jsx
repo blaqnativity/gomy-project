@@ -26,7 +26,7 @@ const Features = () => {
                 <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                     <img
-                      classNameName="h-full w-auto object-cover rounded-full"
+                      className="h-full w-auto object-cover rounded-full"
                       src={item.imageUrl}
                       alt="feature_img"
                     />
