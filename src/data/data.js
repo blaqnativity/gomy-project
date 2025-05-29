@@ -14,11 +14,11 @@ export const consultTwo = affordable;
 
 // Navbar links and their submenus.
 export const navbarLinks = [
-  // {
-  //   id: 1,
-  //   name: "About",
-  //   url: "/about-us",
-  // },
+  {
+    id: 1,
+    name: "Home",
+    url: "/",
+  },
   {
     id: 2,
     name: "Speak to a Doctor",

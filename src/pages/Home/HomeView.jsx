@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import Features from "./Features";
 import Process from "./Process";
 import Newsletter from "../../components/Newsletter";
+import Partners from "../../components/Partners";
 import FAQ from "../../components/FAQ";
 
 const HomeView = () => {
@@ -10,6 +11,7 @@ const HomeView = () => {
       <Hero />
       <Process />
       <Features />
+      <Partners />
       <FAQ />
       <Newsletter />
     </div>
