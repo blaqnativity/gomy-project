@@ -21,21 +21,21 @@ export const howItWorks = [
     imageUrl: phoneUser,
   },
   {
-    id: 1,
+    id: 2,
     title: "Sample Collection",
     description:
       "Our trained Phlebotomist will collect your samples at the comfort of your home",
     imageUrl: sample,
   },
   {
-    id: 1,
+    id: 3,
     title: "Receive accurate results",
     description:
       "Receive your result in your secure and confidential account within 48hours.",
     imageUrl: results,
   },
   {
-    id: 1,
+    id: 4,
     title: "Get free Doctor's consultation",
     description:
       "To understand your result better get a free Doctor's consultation",
@@ -82,7 +82,7 @@ export const features = [
     imageUrl: results,
   },
   {
-    id: 5,
+    id: 6,
     title: "Fast, Reliable and Confidential results",
     description:
       "Our innovative technology is designed to provide accurate and reliable results about your health.",

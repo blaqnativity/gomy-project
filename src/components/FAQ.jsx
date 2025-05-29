@@ -10,7 +10,7 @@ const FAQ = () => {
         </h3>
         <div className="grid max-w-full mx-auto mt-6 divide-y divide-gray-200 ">
           {faqData.map((item) => (
-            <details className="group py-4">
+            <details className="group py-4" key={item.id}>
               <summary className="flex items-center justify-between font-medium list-none cursor-pointer">
                 <span>{item.title}</span>
                 <span className="transition group-open:rotate-180">

@@ -9,7 +9,10 @@ const Process = () => {
         </div>
         <div className="grid grid-cols-1 items-start justify-start md:grid-cols-4 sm:grid-cols-3 gap-10">
           {howItWorks.map((item) => (
-            <div className="text-start md:w-[250px] flex gap-6 flex-col">
+            <div
+              key={item.id}
+              className="text-start md:w-[250px] flex gap-6 flex-col"
+            >
               {/* img */}
               <div>
                 <img

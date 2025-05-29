@@ -23,7 +23,10 @@ const Features = () => {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {/* <!-- Feature --> */}
               {features.map((item) => (
-                <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div
+                  key={item.id}
+                  className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                >
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                     <img
                       className="h-full w-auto object-cover rounded-full"
