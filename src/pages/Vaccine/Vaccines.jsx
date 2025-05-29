@@ -15,7 +15,7 @@ const Vaccines = () => {
           </p>
         </div>
 
-        <div className="flex flex-col ml-8 gap-1">
+        <div className="flex flex-col md:ml-8 gap-1 p-4 md:p-0">
           <h2 className="">All Vaccinations</h2>
 
           {/* green underline */}
