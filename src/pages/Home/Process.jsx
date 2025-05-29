@@ -1,4 +1,4 @@
-import { howItWorks } from "../../data/data";
+import { howItWorks } from "./data";
 
 const Process = () => {
   return (

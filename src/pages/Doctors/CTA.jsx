@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { consultTwo } from "../../data/data";
+import { consultTwo } from "./data";
 
 const CTA = () => {
   return (

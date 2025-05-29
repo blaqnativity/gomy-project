@@ -1,5 +1,5 @@
 import { FaBriefcaseMedical } from "react-icons/fa6";
-import { typesConsultation } from "../../data/data";
+import { typesConsultation } from "./data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
 import { toast } from "react-toastify";

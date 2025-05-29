@@ -1,5 +1,5 @@
 import { FaAngleDown } from "react-icons/fa";
-import { questionsAccordion } from "../../data/data";
+import { questionsAccordion } from "./data";
 
 const FAQ = () => {
   return (

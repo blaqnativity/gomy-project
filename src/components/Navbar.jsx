@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaCartShopping, FaBars, FaHandHoldingMedical } from "react-icons/fa6";
-import { navbarLinks } from "../data/data";
+import { navbarLinks } from "./data";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 

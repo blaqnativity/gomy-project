@@ -1,5 +1,5 @@
 import { FaAngleDown } from "react-icons/fa";
-import { faqData } from "../data/data";
+import { faqData } from "./data";
 
 const FAQ = () => {
   return (

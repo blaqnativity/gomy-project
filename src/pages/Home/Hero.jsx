@@ -1,7 +1,7 @@
 import { FaPhone, FaHome, FaArrowRight } from "react-icons/fa";
 import { FaCertificate, FaNotesMedical } from "react-icons/fa6";
 import { FcDataProtection } from "react-icons/fc";
-import { heroImage } from "../../data/data";
+import { heroImage } from "./data";
 import { Link } from "react-router";
 
 const Hero = () => {

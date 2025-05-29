@@ -1,4 +1,4 @@
-import { consultOne } from "../../data/data";
+import { consultOne } from "./data";
 
 const Hero = () => {
   return (
