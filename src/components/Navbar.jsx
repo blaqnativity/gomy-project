@@ -15,7 +15,7 @@ const Navbar = () => {
   // handle logout function
   const handleLogout = () => {
     localStorage.removeItem("userCredentials");
-    toast.success("Logged out successfully");
+    toast.success("User logged out successfully");
     setTimeout(() => {
       window.location.reload();
     }, 2000);

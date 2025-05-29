@@ -38,7 +38,7 @@ const Login = () => {
         data.email === storedData.email &&
         data.password === storedData.password
       ) {
-        toast.success("Logged in successfully!");
+        toast.success("User logged in successfully");
         navigate("/");
         setTimeout(() => {
           window.location.reload();

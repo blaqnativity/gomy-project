@@ -15,7 +15,7 @@ const ConsultType = () => {
         price: item.price,
         testsInculdes: item.testsInculdes,
       }),
-      toast.success("Consultation added to cart successfully!")
+      toast.success("Item successfully added to cart!")
     );
   };
 

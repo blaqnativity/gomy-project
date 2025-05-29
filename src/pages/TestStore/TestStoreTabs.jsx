@@ -58,7 +58,7 @@ const TestStoreTabs = () => {
             type: "package",
           })
         );
-        toast.success("Test package added to cart!");
+        toast.success("Item successfully added to cart!");
       },
     },
     singleTests: {
@@ -75,7 +75,7 @@ const TestStoreTabs = () => {
             type: "single",
           })
         );
-        toast.success("Single test added to cart!");
+        toast.success("Item successfully added to cart!");
       },
     },
   };
