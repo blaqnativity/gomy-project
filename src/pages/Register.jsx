@@ -1,10 +1,9 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaGoogle } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -186,9 +185,6 @@ const Register = () => {
           </form>
         </div>
       </div>
-
-      {/* Toast notifications container */}
-      <ToastContainer />
     </div>
   );
 };

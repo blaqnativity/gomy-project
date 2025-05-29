@@ -5,6 +5,7 @@ import TestCard from "./TestCard";
 import Loader from "./Loader";
 import Error from "./Error";
 import { addToCart } from "../../store/cartSlice";
+import { toast } from "react-toastify";
 
 const TestStoreTabs = () => {
   const dispatch = useDispatch();
@@ -46,7 +47,7 @@ const TestStoreTabs = () => {
       data: testPackages,
       isLoading: loading.packages,
       error: error.packages,
-      onAdd: (item) =>
+      onAdd: (item) => {
         dispatch(
           addToCart({
             id: item.id,
@@ -56,13 +57,15 @@ const TestStoreTabs = () => {
             testsIncluded: item.testsIncluded,
             type: "package",
           })
-        ),
+        );
+        toast.success("Test package added to cart!");
+      },
     },
     singleTests: {
       data: singleTests,
       isLoading: loading.singleTests,
       error: error.singleTests,
-      onAdd: (item) =>
+      onAdd: (item) => {
         dispatch(
           addToCart({
             id: item.id,
@@ -71,7 +74,9 @@ const TestStoreTabs = () => {
             description: item.description,
             type: "single",
           })
-        ),
+        );
+        toast.success("Single test added to cart!");
+      },
     },
   };
 
@@ -105,7 +110,7 @@ const TestStoreTabs = () => {
         <ul className="space-y-6">
           {current.data.map((item) => (
             <TestCard
-              key={item.type}
+              key={`${item.id}-${item.type}`} // Ensures uniqueness
               item={item}
               onAddToCart={() => current.onAdd(item)}
             />

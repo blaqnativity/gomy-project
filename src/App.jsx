@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -7,16 +6,12 @@ import Home from "./pages/Home/HomeView";
 import Store from "./pages/TestStore/Store";
 import ErrorPage from "./pages/NotFoundPage";
 import DoctorsPage from "./pages/Doctors/DoctorHome";
-
 import Cart from "./pages/TestStore/Cart/Cart";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import WhatsappApi from "./components/whatsapp/WhatsappApi";
-
-// protected routes screen/component
 import ProtectedRoutes from "./utils/ProtectedRoutes";
 
 const App = () => {

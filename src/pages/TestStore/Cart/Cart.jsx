@@ -2,14 +2,19 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, updateQuantity } from "../../../store/cartSlice";
 import CartItem from "./CartItem";
 import { Link } from "react-router";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  const handleRemove = (id) => dispatch(removeFromCart(id));
+  const handleRemove = (id) =>
+    dispatch(removeFromCart(id), toast.success("Item removed from cart!"));
   const handleQuantityChange = (id, quantity) =>
-    dispatch(updateQuantity({ id, quantity: Number(quantity) }));
+    dispatch(
+      updateQuantity({ id, quantity: Number(quantity) }),
+      toast.success("Quantity updated!")
+    );
 
   const total = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,

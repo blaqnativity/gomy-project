@@ -2,6 +2,7 @@ import { FaBriefcaseMedical } from "react-icons/fa6";
 import { typesConsultation } from "../../data/data";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/cartSlice";
+import { toast } from "react-toastify";
 
 const ConsultType = () => {
   const dispatch = useDispatch();
@@ -13,7 +14,8 @@ const ConsultType = () => {
         name: item.title,
         price: item.price,
         testsInculdes: item.testsInculdes,
-      })
+      }),
+      toast.success("Consultation added to cart successfully!")
     );
   };
 
