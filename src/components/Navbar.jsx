@@ -44,12 +44,6 @@ const Navbar = () => {
 
             {/* Desktop Auth (Username first) & Cart */}
             <div className="hidden lg:flex items-center gap-x-4">
-              {storedData && storedData.email && (
-                <span className="text-black dark:text-white font-semibold">
-                  Welcome, {storedData.username}
-                </span>
-              )}
-
               {/* Desktop Nav Links */}
               <ul className="flex space-x-10 text-base font-bold text-black/60 dark:text-white">
                 {navbarLinks.map((link) => (
@@ -62,6 +56,11 @@ const Navbar = () => {
                 ))}
               </ul>
 
+              {storedData && storedData.email && (
+                <span className="text-black dark:text-white font-semibold">
+                  Welcome, {storedData.username}
+                </span>
+              )}
               {/* Desktop Auth Buttons */}
               {storedData && storedData.email ? (
                 <button
@@ -142,6 +141,11 @@ const Navbar = () => {
               </Link>
             ))}
 
+            {/* View Cart */}
+            <Link to="/cart" onClick={() => setIsMobileMenuOpen(false)}>
+              View Cart ({cartCount})
+            </Link>
+
             {/* Auth Buttons */}
             {storedData && storedData.email ? (
               <button
@@ -163,11 +167,6 @@ const Navbar = () => {
                 </Link>
               </>
             )}
-
-            {/* View Cart */}
-            <Link to="/cart" onClick={() => setIsMobileMenuOpen(false)}>
-              View Cart ({cartCount})
-            </Link>
           </div>
         </div>
       </div>
