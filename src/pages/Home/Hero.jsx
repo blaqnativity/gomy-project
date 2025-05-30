@@ -40,15 +40,13 @@ const Hero = () => {
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ">
                 <Link
-                  to="/store"
+                  to="/register"
                   className="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 rounded-lg"></div>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 rounded-lg lg:blur-md blur-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                   <div className="relative flex items-center justify-center gap-2">
-                    <span className="text-white font-medium">
-                      Buy Test Plan
-                    </span>
+                    <span className="text-white font-medium">Get Started</span>
                     <FaArrowRight />
                   </div>
                 </Link>

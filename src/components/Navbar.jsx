@@ -61,6 +61,15 @@ const Navbar = () => {
                   Welcome, {storedData.username}
                 </span>
               )}
+
+              {/* Cart Icon */}
+              <Link to="/cart" className="relative text-black dark:text-white">
+                <FaCartShopping className="text-2xl" />
+                <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
+                  {cartCount}
+                </span>
+              </Link>
+
               {/* Desktop Auth Buttons */}
               {storedData && storedData.email ? (
                 <button
@@ -72,12 +81,6 @@ const Navbar = () => {
               ) : (
                 <>
                   <Link
-                    to="/register"
-                    className="text-black dark:text-white font-semibold"
-                  >
-                    Create Account
-                  </Link>
-                  <Link
                     to="/login"
                     className="rounded-md bg-green-700/90 text-white px-6 py-2.5 font-semibold hover:bg-green-700 transition duration-300"
                   >
@@ -85,14 +88,6 @@ const Navbar = () => {
                   </Link>
                 </>
               )}
-
-              {/* Cart Icon */}
-              <Link to="/cart" className="relative text-black dark:text-white">
-                <FaCartShopping className="text-2xl" />
-                <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
-                  {cartCount}
-                </span>
-              </Link>
             </div>
 
             {/* Mobile Cart and Menu Button */}
