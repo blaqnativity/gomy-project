@@ -55,14 +55,15 @@ const VaccineDetails = () => {
             {vaccine.availability}
           </span>
 
+          {/* whatsapp icon and tooltip text */}
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-green-500 hover:bg-green-500 rounded-full hover:text-white p-2 transition duration-200 z-100 text-xl flex gap-1 items-center"
+            className="group text-green-500 hover:text-white hover:bg-green-500 rounded-full p-2 transition duration-200 z-100 text-xl flex gap-1 items-center"
           >
             <FaWhatsapp />
-            <small className="text-[12px] text-gray-700/0 font-bold hover:text-white">
+            <small className="opacity-0 group-hover:opacity-100 text-[12px] transition-opacity duration-200 font-bold text-white">
               send a dm
             </small>
           </a>
