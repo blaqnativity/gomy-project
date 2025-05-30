@@ -8,6 +8,7 @@ import ErrorPage from "./pages/NotFoundPage";
 import DoctorsPage from "./pages/Doctors/DoctorHome";
 import Cart from "./pages/TestStore/Cart/Cart";
 import Vaccines from "./pages/Vaccine/Vaccines";
+import VaccineDetails from "./pages/Vaccine/VaccineDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/doctors-consultation" element={<DoctorsPage />} />
         <Route path="/store" element={<Store />} />
         <Route path="/vaccinations" element={<Vaccines />} />
+        <Route path="/vaccinations/:id" element={<VaccineDetails />} />
         <Route path="*" element={<ErrorPage />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="/cart" element={<Cart />} />
