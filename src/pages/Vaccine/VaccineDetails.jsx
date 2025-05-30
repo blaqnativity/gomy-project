@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { vaccines } from "./data";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaLongArrowAltRight, FaWhatsapp } from "react-icons/fa";
 import { virusImage } from "./data";
 
 const VaccineDetails = () => {
@@ -9,10 +9,17 @@ const VaccineDetails = () => {
 
   if (!vaccine) {
     return (
-      <div className="flex items-center justify-center h-[60vh]">
+      <div className="flex flex-col gap-4 items-center justify-center h-[60vh]">
         <p className="text-center text-red-500 text-xl font-bold">
           Vaccine not found.
         </p>
+
+        <Link
+          to="/vaccinations"
+          className="text-green-800 font-bold hover:underline ml-4 flex items-center gap-2"
+        >
+          Go Back <FaLongArrowAltRight />
+        </Link>
       </div>
     );
   }

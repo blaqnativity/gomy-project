@@ -9,7 +9,7 @@ const Vaccine = ({ vaccine }) => {
       <img
         src={vaccine.image}
         alt={vaccine.name}
-        className="object-cover w-30 h-30"
+        className="object-cover w-20 h-20"
       />
       <h1 className="text-md text-gray-700 font-bold">{vaccine.name}</h1>
       <p className="text-gray-700">{vaccine.description.slice(0, 80)}...</p>
