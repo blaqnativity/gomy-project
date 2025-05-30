@@ -8,7 +8,13 @@ const VaccineDetails = () => {
   const vaccine = vaccines.find((v) => String(v.id) === id);
 
   if (!vaccine) {
-    return <p className="mt-20 text-center text-red-500">Vaccine not found.</p>;
+    return (
+      <div className="flex items-center justify-center h-[60vh]">
+        <p className="text-center text-red-500 text-xl font-bold">
+          Vaccine not found.
+        </p>
+      </div>
+    );
   }
 
   const phoneNumber = "+2348153127462";
