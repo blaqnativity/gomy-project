@@ -14,9 +14,9 @@ const Vaccine = ({ vaccine }) => {
       <h1 className="text-md text-gray-700 font-bold">{vaccine.name}</h1>
       <p className="text-gray-700">{vaccine.description.slice(0, 80)}...</p>
       <p className="text-red-700/60 text-sm">Dosage: {vaccine.dosage}</p>
-      <p className="text-red-700/60 text-sm">
+      {/* <p className="text-red-700/60 text-sm">
         Availability: {vaccine.availability}
-      </p>
+      </p> */}
 
       <Link
         to={`/vaccinations/${vaccine.id}`}
