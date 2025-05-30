@@ -51,18 +51,21 @@ const VaccineDetails = () => {
             When is this vaccine available?
           </span>
 
+          <span className="text-gray-700/60 tracking-tighter font-bold">
+            {vaccine.availability}
+          </span>
+
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="md:block text-green-500 hover:bg-green-500 rounded-full hover:text-white p-2 transition duration-300 z-100 text-xl"
+            className="text-green-500 hover:bg-green-500 rounded-full hover:text-white p-2 transition duration-200 z-100 text-xl flex gap-1 items-center"
           >
             <FaWhatsapp />
+            <small className="text-[12px] text-gray-700/0 font-bold hover:text-white">
+              send a dm
+            </small>
           </a>
-
-          <span className="text-gray-700/60 tracking-tighter font-bold">
-            {vaccine.availability}
-          </span>
         </div>
       </div>
 

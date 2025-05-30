@@ -4,7 +4,7 @@ const Vaccine = ({ vaccine }) => {
   return (
     <div
       key={vaccine.id}
-      className="shadow-sm rounded-lg p-6 bg-white flex flex-col gap-3"
+      className="shadow-sm rounded-lg border border-gray-900/10 p-6 bg-white flex flex-col gap-3"
     >
       <img
         src={vaccine.image}
