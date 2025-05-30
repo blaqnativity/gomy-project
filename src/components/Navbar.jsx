@@ -42,8 +42,15 @@ const Navbar = () => {
               <FaHandHoldingMedical className="ml-0.5 text-white md:text-3xl" />
             </Link>
 
-            {/* Desktop Nav Links */}
-            <div className="hidden lg:block">
+            {/* Desktop Auth (Username first) & Cart */}
+            <div className="hidden lg:flex items-center gap-x-4">
+              {storedData && storedData.email && (
+                <span className="text-black dark:text-white font-semibold">
+                  Welcome, {storedData.username}
+                </span>
+              )}
+
+              {/* Desktop Nav Links */}
               <ul className="flex space-x-10 text-base font-bold text-black/60 dark:text-white">
                 {navbarLinks.map((link) => (
                   <li
@@ -54,22 +61,15 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-            </div>
 
-            {/* Desktop Auth & Cart */}
-            <div className="hidden lg:flex items-center gap-x-4">
+              {/* Desktop Auth Buttons */}
               {storedData && storedData.email ? (
-                <>
-                  <span className="text-black dark:text-white font-semibold">
-                    Welcome, {storedData.username}
-                  </span>
-                  <button
-                    onClick={handleLogout}
-                    className="ml-4 rounded-md bg-red-500 text-white px-4 py-2 font-semibold hover:bg-red-600 transition duration-200"
-                  >
-                    Logout
-                  </button>
-                </>
+                <button
+                  onClick={handleLogout}
+                  className="ml-4 rounded-md bg-red-500 text-white px-4 py-2 font-semibold hover:bg-red-600 transition duration-200"
+                >
+                  Logout
+                </button>
               ) : (
                 <>
                   <Link
@@ -87,6 +87,7 @@ const Navbar = () => {
                 </>
               )}
 
+              {/* Cart Icon */}
               <Link to="/cart" className="relative text-black dark:text-white">
                 <FaCartShopping className="text-2xl" />
                 <span className="absolute -top-2 -right-2 text-xs bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center">
@@ -104,7 +105,7 @@ const Navbar = () => {
                 </span>
               </Link>
               <button
-                className="text-white focus:outline-none"
+                className="text-white focus:outline-none z-100"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 {isMobileMenuOpen ? (
@@ -124,6 +125,12 @@ const Navbar = () => {
           }`}
         >
           <div className="flex flex-col p-6 pt-24 space-y-6 text-black dark:text-white font-semibold">
+            {/* Show username first */}
+            {storedData && storedData.email && (
+              <span className="text-sm">Welcome, {storedData.username}</span>
+            )}
+
+            {/* Mobile Nav Links */}
             {navbarLinks.map((link) => (
               <Link
                 key={link.id}
@@ -134,19 +141,18 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* Auth Buttons */}
             {storedData && storedData.email ? (
-              <>
-                <span className="text-sm">Welcome, {storedData.username}</span>
-                <button
-                  onClick={() => {
-                    handleLogout();
-                    setIsMobileMenuOpen(false);
-                  }}
-                  className="text-red-600 hover:underline"
-                >
-                  Logout
-                </button>
-              </>
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-red-600 hover:underline"
+              >
+                Logout
+              </button>
             ) : (
               <>
                 <Link to="/register" onClick={() => setIsMobileMenuOpen(false)}>
@@ -157,6 +163,8 @@ const Navbar = () => {
                 </Link>
               </>
             )}
+
+            {/* View Cart */}
             <Link to="/cart" onClick={() => setIsMobileMenuOpen(false)}>
               View Cart ({cartCount})
             </Link>

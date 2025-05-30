@@ -26,7 +26,7 @@ const Hero = () => {
             <div className="-m-2 lg:-m-4 lg:rounded-2xl">
               <img
                 src={consultOne}
-                className="rounded-md max-w-4xl h-auto mx-auto"
+                className="rounded-md md:max-w-4xl h-auto mx-auto"
               />
             </div>
           </div>
