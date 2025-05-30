@@ -15,12 +15,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsappApi from "./components/whatsapp/WhatsappApi";
 import ProtectedRoutes from "./utils/ProtectedRoutes";
+import ScrollToTop from "./components/ScrollToTop";
 
 const App = () => {
   return (
     <>
       <Navbar />
       <WhatsappApi />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/doctors-consultation" element={<DoctorsPage />} />
