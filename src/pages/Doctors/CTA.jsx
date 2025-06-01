@@ -29,12 +29,12 @@ const CTA = () => {
             </p>
             {/* <!-- Button Container --> */}
             <div className="mt-8">
-              <Link
-                to="#"
+              <a
+                href="#consultType"
                 className="inline-block w-fit text-center text-sm font-medium text-gray-100 rounded-md bg-green-600/90 border-solid border-2 px-3.5 py-2.5 hover:bg-green-600 transition duration-300"
               >
-                Book A Consultation
-              </Link>
+                Get Started
+              </a>
             </div>
           </div>
           {/* <!-- Close Text Wrapper --> */}
