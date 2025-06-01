@@ -1,3 +1,5 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/firebase";
 import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
@@ -26,13 +28,26 @@ const Register = () => {
       .required("Confirm Password is required"),
   });
 
-  const onSubmit = (data) => {
-    localStorage.setItem("userCredentials", JSON.stringify(data));
-    toast.success("Registration successful!");
-    setTimeout(() => {
-      navigate("/login");
-    }, 2000); // Redirect to login after 2 seconds
-    reset(); // Reset the form after successful registration
+  const onSubmit = async (data) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        data.email,
+        data.password
+      );
+
+      // Optional: Save username to Firestore or update profile
+      console.log("User created:", userCredential.user);
+
+      toast.success("Registration successful!");
+      reset();
+      setTimeout(() => {
+        navigate("/login");
+      }, 1000);
+    } catch (error) {
+      console.error("Error registering:", error.message);
+      toast.error(error.message);
+    }
   };
 
   // using the useForm hook in react

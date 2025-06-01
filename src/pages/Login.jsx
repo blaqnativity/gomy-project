@@ -4,6 +4,8 @@ import { toast } from "react-toastify";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaGoogle } from "react-icons/fa6";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase/firebase"; // make sure this path is correct
 
 // Validation schema
 const schema = yup.object().shape({
@@ -25,32 +27,24 @@ const Login = () => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm({
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
-    const storedData = JSON.parse(localStorage.getItem("userCredentials"));
+  const onSubmit = async (data) => {
+    try {
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      toast.success("Logged in successfully!");
+      reset();
 
-    if (storedData) {
-      if (
-        data.email === storedData.email &&
-        data.password === storedData.password
-      ) {
-        toast.success("User logged in successfully");
+      setTimeout(() => {
         navigate("/");
-        setTimeout(() => {
-          window.location.reload();
-        }, 2000);
-      } else {
-        toast.error("Invalid email or password");
-      }
-    } else {
-      toast.error("User not found. Please create an account to get started.");
+      }, 1000);
+    } catch (error) {
+      console.error("Login error:", error.message);
+      toast.error("Invalid email or password");
     }
-
-    reset();
   };
 
   return (
@@ -73,7 +67,7 @@ const Login = () => {
             </p>
           </div>
 
-          {/* Google login (optional) */}
+          {/* Google login (non-functional placeholder) */}
           <div className="space-y-3">
             <button className="w-full flex items-center justify-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
               <FaGoogle className="mr-2 text-xl" />
@@ -141,9 +135,10 @@ const Login = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+              disabled={isSubmitting}
+              className="w-full p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50"
             >
-              Login
+              {isSubmitting ? "Logging in..." : "Login"}
             </button>
           </form>
         </div>
