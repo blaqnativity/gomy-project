@@ -5,11 +5,11 @@ const CTA = () => {
   return (
     <>
       {/* <!-- Container --> */}
-      <div className="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl mt-12 md:my-30 xl:max-w-6xl">
+      <div className="relative flex flex-col-reverse items-center mx-auto lg:flex-row-reverse lg:max-w-5xl mt-12 md:my-30 xl:max-w-6xl">
         {/* <!-- Image Column --> */}
         <div className="w-full h-64 lg:w-1/2 lg:h-auto">
           <img
-            className="h-full w-full object-cover"
+            className="h-full max-w-4xl mx-auto rounded-md object-cover"
             src={consultTwo}
             alt="Winding mountain road"
           />

@@ -43,7 +43,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Auth (Username first) & Cart */}
-            <div className="hidden lg:flex items-center gap-x-4">
+            <div className="hidden lg:flex items-center gap-x-8">
               {/* Desktop Nav Links */}
               <ul className="flex space-x-10 text-base font-bold text-black/60 dark:text-white">
                 {navbarLinks.map((link) => (

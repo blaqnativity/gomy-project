@@ -90,6 +90,3 @@ export const features = [
   },
 ];
 // End of Homepage features section
-
-
-
