@@ -46,7 +46,7 @@ const Register = () => {
       }, 1000);
     } catch (error) {
       console.error("Error registering:", error.message);
-      toast.error(error.message);
+      toast.error("User already exists with this email");
     }
   };
 
