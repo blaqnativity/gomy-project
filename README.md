@@ -1,12 +1,42 @@
-# React + Vite
+# Alphamed – Digital Lab Test Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Alphamed** is a digital platform developed as a final project for the **GOMYCODE Fullstack Development Program**. It enables users to browse, select, and book laboratory tests — either as individual tests or bundled packages — through a clean and user-friendly interface. The platform also includes authentication for secure access to user-specific features.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* 🔍 Browse lab tests and packages via a clean tabbed interface.
+* 📦 Toggle between **Single Tests** and **Test Packages**.
+* 🔐 User Authentication (Login/Register) with **Firebase Authentication**.
+* ⚡ Real-time toast notifications for feedback using React-Toastify.
+* 📱 Mobile-responsive design with **Tailwind CSS**.
+* 🔄 Dynamic fetching of data from test endpoints.
+* 🚫 Protected routes for pages that require user login.
+* ⚙️ Modular and component-based architecture using **React**.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🧠 Frontend
+
+* **React.js** – JavaScript library for building user interfaces.
+* **React Router DOM** – For client-side routing and protected navigation.
+* **Tailwind CSS** – Utility-first CSS framework for styling.
+* **React-Toastify** – Elegant toast notifications.
+* **Axios** – For making HTTP requests.
+
+### 🔐 Authentication
+
+* **Firebase Authentication** – For secure login and registration functionality.
+
+### ⚙️ Tools and Utilities
+
+* **Vite** – Fast frontend tooling and dev server.
+* **Git & GitHub** – Version control and repository management.
+
+## Usage
+
+* Register or log in using the Firebase-authenticated form.
+* Browse tests via tabs (Single Tests / Test Packages).
+* Book a test (connected features based on backend/API availability).
+* Receive real-time feedback using toast notifications.
+* Access restricted pages only after login.
+

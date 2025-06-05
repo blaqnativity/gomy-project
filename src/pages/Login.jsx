@@ -42,8 +42,8 @@ const Login = () => {
         navigate("/");
       }, 1000);
     } catch (error) {
-      console.error("Login error:", error.message);
-      toast.error("Invalid email or password");
+      console.error("You are not connected to the internet", error.message);
+      toast.error("Invalid user credentials");
     }
   };
 

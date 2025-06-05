@@ -42,7 +42,7 @@ const Register = () => {
       toast.success("Registration successful!");
       reset();
       setTimeout(() => {
-        navigate("/login");
+        navigate("/");
       }, 1000);
     } catch (error) {
       console.error("Error registering:", error.message);
