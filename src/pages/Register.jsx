@@ -46,8 +46,8 @@ const Register = () => {
         navigate("/");
       }, 1000);
     } catch (error) {
-      console.error("Error registering:", error.message);
-      toast.error("User already exists with this email");
+      console.error("Error registering:");
+      toast.error(`Invalid user credentials ${error.message}`);
     }
   };
 

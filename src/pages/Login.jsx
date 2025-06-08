@@ -37,15 +37,14 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, data.email, data.password);
       toast.success("Logged in successfully!");
-      // toast.success(`Welcome ${user.displayName}`);
       reset();
 
       setTimeout(() => {
         navigate("/");
       }, 1000);
     } catch (error) {
-      console.error("You are not connected to the internet", error.message);
-      toast.error("Invalid user credentials");
+      console.error("You are not connected to the internet");
+      toast.error(`Invalid user credentials ${error.message}`);
     }
   };
 
