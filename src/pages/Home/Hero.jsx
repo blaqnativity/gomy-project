@@ -58,7 +58,9 @@ const Hero = () => {
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 rounded-lg"></div>
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 rounded-lg lg:blur-md blur-0 group-hover:opacity-60 transition-opacity duration-500"></div>
                   <div className="relative flex items-center justify-center gap-2">
-                    <span className="text-white font-medium">Get Started</span>
+                    <span className="text-white font-medium">
+                      {isLoggedIn ? "Buy a Test Plan" : "Get Started"}
+                    </span>
                     <FaArrowRight />
                   </div>
                 </Link>
