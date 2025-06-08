@@ -6,6 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaGoogle } from "react-icons/fa6";
 import { toast } from "react-toastify";
+import GoogleAuth from "../components/GoogleAuth";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -82,10 +83,7 @@ const Register = () => {
 
           {/* <!-- Social Login Buttons --> */}
           <div className="space-y-3">
-            <button className="w-full flex items-center justify-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 focus:outline-none transition-colors">
-              <FaGoogle className="mr-2 text-xl " />
-              Sign Up with Google
-            </button>
+            <GoogleAuth />
           </div>
 
           {/* <!-- Divider Section --> */}

@@ -5,7 +5,8 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaGoogle } from "react-icons/fa6";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase/firebase"; // make sure this path is correct
+import { auth } from "../firebase/firebase";
+import GoogleAuth from "../components/GoogleAuth";
 
 // Validation schema
 const schema = yup.object().shape({
@@ -36,6 +37,7 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, data.email, data.password);
       toast.success("Logged in successfully!");
+      // toast.success(`Welcome ${user.displayName}`);
       reset();
 
       setTimeout(() => {
@@ -69,10 +71,7 @@ const Login = () => {
 
           {/* Google login (non-functional placeholder) */}
           <div className="space-y-3">
-            <button className="w-full flex items-center justify-center p-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-              <FaGoogle className="mr-2 text-xl" />
-              Sign in with Google
-            </button>
+            <GoogleAuth />
           </div>
 
           {/* Divider */}
