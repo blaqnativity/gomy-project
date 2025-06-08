@@ -12,10 +12,10 @@ const GoogleLogin = () => {
       const user = result.user;
       toast.success(`Welcome ${user.displayName}`);
       console.log("User info:", user);
-      navigate("/"); // ✅ make sure you import from react-router-dom
+      navigate("/");
     } catch (error) {
       console.error("Google login error:", error.message);
-      toast.error("Google login failed");
+      toast.error(`Google login failed, ${error.message}`);
     }
   };
 

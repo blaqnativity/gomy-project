@@ -1,6 +1,6 @@
 import { vaccines } from "./data";
 import Vaccine from "./Vaccine";
-import NewsLetter from "../../components/NewsLetter";
+// import NewsLetter from "../../components/NewsLetter";
 
 const Vaccines = () => {
   return (
@@ -30,7 +30,7 @@ const Vaccines = () => {
           </div>
         </div>
       </div>
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </div>
   );
 };

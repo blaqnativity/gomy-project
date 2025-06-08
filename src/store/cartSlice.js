@@ -19,7 +19,7 @@ const cartSlice = createSlice({
         const newItem = { ...action.payload, quantity: 1 };
         state.items.push(newItem);
       }
-      localStorage.setItem("cart", JSON.stringify(state.items)); // keep this to persist changes
+      localStorage.setItem("cart", JSON.stringify(state.items));
     },
 
     removeFromCart: (state, action) => {

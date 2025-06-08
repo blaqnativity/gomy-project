@@ -47,7 +47,7 @@ const Cart = () => {
           )}
 
           <Link
-            to="/store"
+            to="/book-test"
             className="flex font-semibold text-indigo-600 text-sm mt-10"
           >
             ← Continue Shopping
