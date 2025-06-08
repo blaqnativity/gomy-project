@@ -8,7 +8,7 @@ const FAQ = () => {
         <h3 className="mt-3 text-xl font-bold text-gray-800 md:text-2xl dark:text-gray-100">
           Frequently Asked Questions
         </h3>
-        <div className="grid max-w-full mx-auto mt-6 divide-y divide-gray-200 ">
+        <div className="grid max-w-full mx-auto mt-6 divide-y divide-gray-200 transition duration-100">
           {faqData.map((item) => (
             <details className="group py-4" key={item.id}>
               <summary className="flex items-center justify-between font-medium list-none cursor-pointer">

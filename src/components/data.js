@@ -18,7 +18,7 @@ export const navbarLinks = [
   {
     id: 4,
     name: "All Tests",
-    url: "/store",
+    url: "/book-test",
   },
 ];
 // Navbar links and their submenus end.

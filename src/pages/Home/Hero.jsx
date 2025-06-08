@@ -3,8 +3,20 @@ import { FaCertificate, FaNotesMedical } from "react-icons/fa6";
 import { FcDataProtection } from "react-icons/fc";
 import { heroImage } from "./data";
 import { Link } from "react-router";
+import { useEffect, useState } from "react";
+import { auth } from "../../firebase/firebase";
 
 const Hero = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setIsLoggedIn(!!user);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <div>
       <section className="relative  text-white overflow-hidden pt-20">
@@ -40,7 +52,7 @@ const Hero = () => {
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 ">
                 <Link
-                  to="/register"
+                  to={isLoggedIn ? "/book-test" : "/register"}
                   className="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 rounded-lg"></div>
