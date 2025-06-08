@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row items-center justify-around">
             <div className="w-full md:w-1/2 mb-12 md:mb-0 relative">
               <h1 className="text-5xl md:text-8xl font-bold mb-6 leading-tight bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 bg-clip-text text-transparent">
-                AlphaMed
+                ALMed
                 <br />
                 <span className="bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 inline-block text-transparent bg-clip-text">
                   Laboratories
