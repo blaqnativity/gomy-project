@@ -11,32 +11,32 @@ import Vaccines from "./pages/Vaccine/Vaccines";
 import VaccineDetails from "./pages/Vaccine/VaccineDetails";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+
 import WhatsappApi from "./components/whatsapp/WhatsappApi";
 import ProtectedRoutes from "./utils/ProtectedRoutes";
-import ScrollToTop from "./components/ScrollToTop";
+
+import MainLayout from "./layouts/MainLayout";
 
 const App = () => {
   return (
     <>
-      <Navbar />
       <WhatsappApi />
-      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/doctors-consultation" element={<DoctorsPage />} />
-        <Route path="/book-test" element={<Store />} />
-        <Route path="/vaccinations" element={<Vaccines />} />
-        <Route path="/vaccinations/:id" element={<VaccineDetails />} />
-        <Route path="*" element={<ErrorPage />} />
-        <Route element={<ProtectedRoutes />}>
-          <Route path="/cart" element={<Cart />} />
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/doctors-consultation" element={<DoctorsPage />} />
+          <Route path="/book-test" element={<Store />} />
+          <Route path="/vaccinations" element={<Vaccines />} />
+          <Route path="/vaccinations/:id" element={<VaccineDetails />} />
+          <Route path="*" element={<ErrorPage />} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/cart" element={<Cart />} />
+          </Route>
         </Route>
+
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-      <Footer />
       <ToastContainer position="top-right" autoClose={3000} />
     </>
   );

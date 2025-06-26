@@ -4,9 +4,9 @@ import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { FaGoogle } from "react-icons/fa6";
 import { toast } from "react-toastify";
 import GoogleAuth from "../components/GoogleAuth";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -194,6 +194,13 @@ const Register = () => {
               className="w-full p-3 bg-black text-white rounded-lg hover:bg-gray-800 focus:outline-none transition-colors"
             >
               Register
+            </button>
+
+            <button
+              onClick={() => navigate("/")}
+              className="text-center font-semibold w-full text-gray-500 hover:text-gray-400 transition duration-200"
+            >
+              Return Home
             </button>
           </form>
         </div>

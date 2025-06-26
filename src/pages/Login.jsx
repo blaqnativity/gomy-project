@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { FaGoogle } from "react-icons/fa6";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import GoogleAuth from "../components/GoogleAuth";
@@ -44,7 +43,7 @@ const Login = () => {
       }, 1000);
     } catch (error) {
       console.error("You are not connected to the internet");
-      toast.error(`Invalid user credentials ${error.message}`);
+      toast.error(`${error.message}`);
     }
   };
 
@@ -137,6 +136,14 @@ const Login = () => {
               className="w-full p-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50"
             >
               {isSubmitting ? "Logging in..." : "Login"}
+            </button>
+
+            {/* return home button */}
+            <button
+              onClick={() => navigate("/")}
+              className="text-center font-semibold w-full text-gray-500 hover:text-gray-400 transition duration-200"
+            >
+              Return Home
             </button>
           </form>
         </div>
