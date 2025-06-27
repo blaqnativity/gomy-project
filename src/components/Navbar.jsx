@@ -104,7 +104,7 @@ const Navbar = () => {
                 </span>
               </Link>
               <button
-                className="text-white"
+                className="text-white z-50"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               >
                 {isMobileMenuOpen ? (
@@ -119,7 +119,7 @@ const Navbar = () => {
 
         {/* Mobile Slide Menu */}
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 z-40 shadow-lg transform transition-transform duration-300 ${
+          className={`fixed top-0 right-0 h-fit w-64 bg-white dark:bg-gray-900 z-40 shadow-lg transform transition-transform duration-300 ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
