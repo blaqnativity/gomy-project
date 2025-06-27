@@ -6,7 +6,6 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 import GoogleAuth from "../components/GoogleAuth";
-import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -62,7 +61,7 @@ const Register = () => {
   });
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center h-screen items-center bg-gray-100">
       <div className="w-96 max-w-lg bg-white rounded-lg overflow-hidden shadow-lg">
         <div className="p-8">
           {/* <!-- Header Section --> */}
