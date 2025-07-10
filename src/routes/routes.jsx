@@ -1,4 +1,4 @@
-// screens
+// screens and route pages
 import Home from "../pages/Home/HomeView";
 import Store from "../pages/TestStore/Store";
 import ErrorPage from "../pages/NotFoundPage";
